@@ -43,14 +43,15 @@ algorithm, but to give a tool to play around and experiment with a certain ease
 reasonable shape (nicely aligned, and with coefficients as rational numbers) at
 each step.
 
-The python code to reach the start table above is split in two file, a library
-called comp_frac.py (computations with fractions), which imports the standard
-libs:
+The python code is split in two files, a library called comp_frac.py
+(computations with fractions) and the applications file, sample_problems.py,
+which uses the library. The lib needs two python packages:
 
     pandas : for nice tabular display only
     fractions  : for doing fraction instead of floating point arithmetic
 
-in the applications file, we import the lib as cf and use it as
+To get the start table above and then solve the problem, we import the lib as
+cf in the applications file and use it:
 
 ----------------------------------------
 
@@ -94,6 +95,8 @@ s4 = cf.xpiv(s3, 4, 1) # pivot s3 state over col=4, row=1
 #       1  7/3 x1   + 1/3 x2        + x4  - 1/3 x5    = 5
 #       2  2/3 x1   + 5/3 x2  + x3        + 1/3 x5    = 5
 #       3  2/3 x1  + 11/3 x2              + 4/3 x5   = 20
+
+----------------------------------------
 
 Finally, all coeffs of the cost function are positive, the current minimal value
 is -20 (not 20, we flip the sign!!), reached at x1=x2=x5=0 and x3=x4=5. The min
