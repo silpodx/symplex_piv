@@ -1,4 +1,4 @@
-# symplex_piv
+# symplex-pivoting
 Symplex algorithm pivoting made easy with a short python lib.
 
 See example with comments in read_me.txt, then run lines in sample_problems.py
